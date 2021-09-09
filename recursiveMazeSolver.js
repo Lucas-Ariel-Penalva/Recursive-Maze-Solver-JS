@@ -11,22 +11,22 @@ function pathFinder(maze, loc = { ver: 0, hor: 0 }) {
   location isn't out of the bounds or occupied by a wall. If the updated location is valid, the function
   will call itself with the new location until it runs out of possibilities or finds the base case. */
 
-  // Checking right
+  // Checking right.
   if (loc.hor + 1 < maze[0].length && maze[loc.ver][loc.hor + 1] !== "*") {
     if (pathFinder(maze, { ...loc, hor: loc.hor + 1 })) return true;
   }
 
-  // Checking left
+  // Checking left.
   if (loc.hor - 1 >= 0 && maze[loc.ver][loc.hor - 1] !== "*") {
     if (pathFinder(maze, { ...loc, hor: loc.hor - 1 })) return true;
   }
 
-  // Checking down
+  // Checking down.
   if (loc.ver + 1 < maze.length && maze[loc.ver + 1][loc.hor] !== "*") {
     if (pathFinder(maze, { ...loc, ver: loc.ver + 1 })) return true;
   }
 
-  // Checking up
+  // Checking up.
   if (loc.ver - 1 >= 0 && maze[loc.ver - 1][loc.hor] !== "*") {
     if (pathFinder(maze, { ...loc, ver: loc.ver - 1 })) return true;
   }
