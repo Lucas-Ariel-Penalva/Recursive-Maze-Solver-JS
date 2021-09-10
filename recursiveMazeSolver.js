@@ -1,6 +1,11 @@
+/* The location object holds the vertical and horizontal position. If it isn't supplied, the starting position will be the top right corner.
+   This function works for any starting location. */
+
 function mazeSolver(maze, loc = { ver: 0, hor: 0 }) {
   
-  // Base case: checking if the current location is the exit.
+  /* Base case: Checking if the current location is the exit. Here the exit is defined as the lower right corner
+     but you can change the exit to any other position and the solution will still work. */
+  
   if (loc.ver === maze.length - 1 && loc.hor === maze[0].length - 1)
     return true;
 
@@ -8,7 +13,7 @@ function mazeSolver(maze, loc = { ver: 0, hor: 0 }) {
   maze[loc.ver][loc.hor] = "*";
   
   /* Checking the adjacent spots in all cardinal directions. The "if" statement ensures that the updated
-  location isn't out of the bounds or occupied by a wall. If the updated location is valid, the function
+  location isn't out bounds or occupied by a wall. If the updated location is valid, the function
   will call itself with the new location until it runs out of possibilities or finds the base case. */
 
   // Checking right.
