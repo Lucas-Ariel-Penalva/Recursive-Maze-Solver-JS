@@ -21,3 +21,9 @@ Problems involving mazes and graphs can appear in coding websites and programmin
 I tested the correctness of my solution on ***huge randomly generated problem sets***, but I'm sure there are more elegant ways to write it. The code with commentary is in the Javascript file.
 
 It's very common to have a hard time understanding how ***Recursion*** and the ***Call Stack*** works. If you need a detailed breakdown on how recursion works in this kind of problem, I recommend [watching this video](https://www.youtube.com/watch?v=W9F8fDQj7Ok) and taking some time to think about the whole process.
+
+### This repository has two files:
+
+* *mazeSolverOriginal.js* is my first solution to the problem and it's full of comments mostly for didactic purposes.
+* *mazeSolverRevised.js* is an updated, cleaner version of the solution that strips most of the comments and removes repetition from the code.
+
