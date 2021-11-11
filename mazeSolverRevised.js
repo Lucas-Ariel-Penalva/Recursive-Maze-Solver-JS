@@ -10,7 +10,7 @@ function mazeSolver(maze, loc = { ver: 0, hor: 0 }) {
   if (loc.ver === maze.length - 1 && loc.hor === maze[0].length - 1)
     return true;
 
-  //Turn spot into wall
+  //Turn current position into a wall
   maze[loc.ver][loc.hor] = "*";
 
   let directions = [
